@@ -1,17 +1,32 @@
 <?php
 
-namespace Database\Seeders;
+namespace App\Models;
 
-use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
-class PassengerSeeder extends Seeder
+class Passenger extends Model
 {
-    public function run()
-    {
-        DB::table('passengers')->insert([
-            ['name' => 'Juan', 'lastname' => 'Perez', 'date_of_birth' => '1990-05-15', 'ci' => '12345678', 'phone_number' => '789123456'],
-            ['name' => 'Maria', 'lastname' => 'Gomez', 'date_of_birth' => '1985-08-20', 'ci' => '87654321', 'phone_number' => '987654321'],
-        ]);
-    }
+    use HasFactory;
+
+    // Specify the custom primary key
+    protected $primaryKey = 'passenger_id';
+
+    // If the primary key is not an auto-incrementing integer
+    public $incrementing = true;
+
+    // Specify the data type of the primary key if necessary
+    protected $keyType = 'int';
+
+    // Define fillable fields
+    protected $fillable = [
+        'name',
+        'lastname',
+        'date_of_birth',
+        'ci',
+        'phone_number',
+    ];
+    
+    // Define table name if it's not pluralized conventionally
+    protected $table = 'passengers';
 }

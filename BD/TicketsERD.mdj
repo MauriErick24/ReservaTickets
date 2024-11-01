@@ -2001,7 +2001,7 @@
 							},
 							"font": "Arial;13;0",
 							"left": 472,
-							"top": 976,
+							"top": 960,
 							"width": 112,
 							"height": 163,
 							"text": "Could it have states?\n\nwhat types?\n\nif a seat has been taken, or in other words, it had been assigned to a ticket, the seat is no longer available. "
@@ -2020,7 +2020,7 @@
 								"$ref": "AAAAAAGS4vd6BB3yyTU="
 							},
 							"lineStyle": 1,
-							"points": "442:1047;471:1050"
+							"points": "442:1039;471:1040"
 						}
 					]
 				},
