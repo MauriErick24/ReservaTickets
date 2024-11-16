@@ -15,7 +15,7 @@ const InfoForm = () => {
 
   const loadCities = async () => {
     const cities = await getAllCities();
-    console.log("🚀 ~ loadCities ~ cities:", cities);
+    // console.log("🚀 ~ loadCities ~ cities:", cities);
 
     setCitiesList(cities);
   };
